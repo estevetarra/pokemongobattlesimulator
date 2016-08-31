@@ -21,9 +21,18 @@
 		$(document).ready(function(){
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Basic_Moves.csv", function(data, status){
 				basicMoves = csvJSON(data);
+				var names = [];
+				for(var i = 0; i< basicMoves.length; i++) 
+					names.push(basicMoves[i]["Name"]);
+				addOptionsToDatalist(names, 'pokemon_list_quick_moves');
+				
 			});
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Charged_Moves.csv", function(data, status){
 				chargeMoves = csvJSON(data);
+				var names = [];
+				for(var i = 0; i< chargeMoves.length; i++) 
+					names.push(chargeMoves[i]["Name"]);
+				addOptionsToDatalist(names, 'pokemon_list_charge_moves');
 			});
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Species_Data.csv", function(data, status){
 				species = csvJSON(data);
@@ -41,13 +50,9 @@
 <BODY>
 	<datalist id="pokemon-names">
 	</datalist>
-	<datalist id="pokemon1_list_quick_moves">
+	<datalist id="pokemon_list_quick_moves">
 	</datalist>
-	<datalist id="pokemon2_list_quick_moves">
-	</datalist>
-	<datalist id="pokemon1_list_charge_moves">
-	</datalist>
-	<datalist id="pokemon2_list_charge_moves">
+	<datalist id="pokemon_list_charge_moves">
 	</datalist>
    <H1>Battle Simulator Pokemon Go</H1>
    <P>This is a calculator for 1 vs 1 matches</P>
@@ -60,13 +65,13 @@
 	  </tr>
 	  <tr>
 		<td>Quick</td>
-		<td><input list="pokemon1_list_quick_moves" id="pokemon1_quick_move" onchange=""></td>
-		<td><input list="pokemon2_list_quick_moves" id="pokemon2_quick_move" onchange=""></td>
+		<td><input list="pokemon_list_quick_moves" id="pokemon1_quick_move" onchange=""></td>
+		<td><input list="pokemon_list_quick_moves" id="pokemon2_quick_move" onchange=""></td>
 	  </tr>
 	  <tr>
 		<td> Charge </td>
-		<td> <input list="pokemon1_list_charge_moves" id="pokemon1_charge_move" onchange=""> </td>
-		<td> <input list="pokemon2_list_charge_moves" id="pokemon2_charge_move" onchange=""> </td>
+		<td> <input list="pokemon_list_charge_moves" id="pokemon1_charge_move" onchange=""> </td>
+		<td> <input list="pokemon_list_charge_moves" id="pokemon2_charge_move" onchange=""> </td>
 	  </tr>
 
 	  <tr>
