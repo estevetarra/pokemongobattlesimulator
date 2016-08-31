@@ -8,7 +8,7 @@
 		<script>
 		$(document).ready(function(){
 			$("button").click(function(){
-				$.get("data/Basic_Moves.csv", function(data, status){
+				$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Basic_Moves.csv", function(data, status){
 					//alert("Data: " + data + "\nStatus: " + status);
 					alert("Status: " + status);
 				});
