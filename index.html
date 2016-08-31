@@ -27,10 +27,9 @@
 			});
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Species_Data.csv", function(data, status){
 				species = csvJSON(data);
-				alert(JSON.stringify(species));
 				var names = [];
-				for(var i = 0; i< species["Name"].length; i++) 
-					names.push(species["Name"][i]);
+				for(var i = 0; i< species.length; i++) 
+					names.push(species[i]["Name"]);
 				addOptionsToDatalist(names, 'pokemon-names');
 			});
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Type_Table.csv", function(data, status){
