@@ -4,17 +4,28 @@
       <TITLE>
          Battle Simulator Pokemon Go
       </TITLE>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script>
+      	<script src="csvJSON.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		var basicMoves;
+		var chargeMoves;
+		var species;
+		var types;
 		$(document).ready(function(){
-			$("button").click(function(){
-				$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Basic_Moves.csv", function(data, status){
-					alert("Data: " + data + "\nStatus: " + status);
-					//alert("Status: " + status);
-				});
+			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Basic_Moves.csv", function(data, status){
+				basicMoves = csvJSON(data);
+			});
+			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Charged_Moves.csv", function(data, status){
+				chargeMoves = csvJSON(data);
+			});
+			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Species_Data.csv", function(data, status){
+				species = csvJSON(data);
+			});
+			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Type_Table.csv", function(data, status){
+				types = csvJSON(data);
 			});
 		});
-		</script>
+	</script>
    </HEAD>
 <BODY>
    <H1>Battle Simulator Pokemon Go</H1>
