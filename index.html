@@ -7,6 +7,13 @@
       	<script src="csvJSON.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
+		function addOptionsToDatalist(options, datalist)
+		{
+			var myoptions = '';
+			for(var i = 0; i < options.length; i++)
+				myoptions += '<option value="'+options[i]+'" />';
+			document.getElementById(datalist).innerHTML = myoptions;
+		}
 		var basicMoves;
 		var chargeMoves;
 		var species;
@@ -26,8 +33,18 @@
 			});
 		});
 	</script>
-   </HEAD>
+</HEAD>
 <BODY>
+	<datalist id="pokemon-names">
+	</datalist>
+	<datalist id="pokemon1_list_quick_moves">
+	</datalist>
+	<datalist id="pokemon2_list_quick_moves">
+	</datalist>
+	<datalist id="pokemon1_list_charge_moves">
+	</datalist>
+	<datalist id="pokemon2_list_charge_moves">
+	</datalist>
    <H1>Battle Simulator Pokemon Go</H1>
    <P>This is a calculator for 1 vs 1 matches</P>
    <table border="0">
