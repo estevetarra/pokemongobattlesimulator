@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+   <HEAD>
+      <TITLE>
+         Battle Simulator Pokemon Go
+      </TITLE>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$.get("data/Basic_Moves.csv", function(data, status){
+					//alert("Data: " + data + "\nStatus: " + status);
+					alert("Status: " + status);
+				});
+			});
+		});
+		</script>
+   </HEAD>
+<BODY>
+   <H1>Battle Simulator Pokemon Go</H1>
+   <P>This is a calculator for 1 vs 1 matches</P>
+   <table border="0">
+	  <tr>
+		<th>Pokemon</th>
+		<th> <input list="pokemon-names" id="pokemon1_name" onchange=""></th>
+		<th> <input list="pokemon-names" id="pokemon1_name" onchange=""> </th>
+
+	  </tr>
+	  <tr>
+		<td>Quick</td>
+		<td><input list="pokemon1_list_quick_moves" id="pokemon1_quick_move" onchange=""></td>
+		<td><input list="pokemon2_list_quick_moves" id="pokemon2_quick_move" onchange=""></td>
+	  </tr>
+	  <tr>
+		<td> Charge </td>
+		<td> <input list="pokemon1_list_charge_moves" id="pokemon1_charge_move" onchange=""> </td>
+		<td> <input list="pokemon2_list_charge_moves" id="pokemon2_charge_move" onchange=""> </td>
+	  </tr>
+
+	  <tr>
+		<td>LVL</td>
+		<td><input type="number" id="pokemon1_lvl" min="1" max="40.5" step="0.5" value="20"></td>
+		<td><input type="number" id="pokemon2_lvl" min="1" max="40.5" step="0.5" value="20"></td>
+	  </tr>
+	  <tr>
+		<td>IV ATT</td>
+		<td><input type="number" id="pokemon1_iv_att" min="0" max="15" step="1" value="7"></td>
+		<td><input type="number" id="pokemon2_iv_att" min="0" max="15" step="1" value="7"></td>
+	  </tr>
+	  <tr>
+		<td>IV DEF</td>
+		<td><input type="number" id="pokemon1_iv_def" min="0" max="15" step="1" value="7"></td>
+		<td><input type="number" id="pokemon2_iv_def" min="0" max="15" step="1" value="7"></td>
+	  </tr>
+	  <tr>
+		<td>IV STA</td>
+		<td><input type="number" id="pokemon1_iv_sta" min="0" max="15" step="1" value="7"></td>
+		<td><input type="number" id="pokemon2_iv_sta" min="0" max="15" step="1" value="7"></td>
+	  </tr>
+	</table>
+	<button type="button">Fight!</button>
+	<br>
+	<a href="url"> Here</a> you can stimate a pokemon IV based on CP
+</BODY>
+</HTML>
