@@ -18,6 +18,7 @@
 		var chargeMoves;
 		var species;
 		var types;
+		var cpmultiplier;
 		$(document).ready(function(){
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Basic_Moves.csv", function(data, status){
 				basicMoves = csvJSON(data);
@@ -43,6 +44,9 @@
 			});
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Type_Table.csv", function(data, status){
 				types = csvJSON(data);
+			});
+			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/CP_Multiplier.csv", function(data, status){
+				cpmultiplier = csvJSON(data);
 			});
 		});
 	</script>
