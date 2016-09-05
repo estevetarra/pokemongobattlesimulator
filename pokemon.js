@@ -17,7 +17,9 @@ function fighter(pokemon, baseatt, basedeff, basehp, deffenfing)
     this.basehp = basehp
     this.deffenfing = deffenfing;
     this.cooldown = 0;
-    
+    this.nowmove = "NONE";
+    this.energy = 0;
+    this.hp = 300;
 }
 
 function battle(fighter1, fighter2)
