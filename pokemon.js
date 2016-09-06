@@ -36,7 +36,7 @@ function battle(fighter1, fighter2, quick_move, charge_moves)
     this.quick_move = quick_move;
     this.charge_moves = charge_moves;
     this.time = 0;
-    this.next_turn = function 10msmore()
+    this.next_turn = function ms10more()
     {
         //If both of them are alive
         if(fighter1.cooldown == 0)
