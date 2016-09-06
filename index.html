@@ -8,6 +8,12 @@
       	<script src="csvJSON.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
+		function getRowSuchParamaterHasValue(objectjson, param,value)
+		{
+			for(var i = 0; i < objectjson.length; i++)
+				if(objectjson[i][param] == value) 
+					return objectjson[i];
+		}
 		function addOptionsToDatalist(options, datalist)
 		{
 			var myoptions = '';
@@ -35,7 +41,6 @@
 				for(var i = 0; i< chargeMoves.length; i++) 
 					names.push(chargeMoves[i]["Name"]);
 				addOptionsToDatalist(names, 'pokemon_list_charge_moves');
-				alert(JSON.stringify(chargeMoves));
 			});
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Species_Data.csv", function(data, status){
 				species = csvJSON(data);
@@ -56,7 +61,13 @@
 		function startBattle()
 		{
 			
-			//var pokemon1 = new pokemon(document.getElementById("pokemon1").value);
+			var pokemon1 = new pokemon(document.getElementById("pokemon1_name").value,document.getElementById("pokemon1_lvl").value,
+							getRowSuchParamaterHasValue(cpmultiplier,"Level",document.getElementById("pokemon1_lvl").value)["CP_Multiplier"],
+							document.getElementById("pokemon1_charge_move").value, document.getElementById("pokemon1_quick_move").value,
+							document.getElementById("pokemon1_iv_att").value,document.getElementById("pokemon1_iv_def").value),
+							document.getElementById("pokemon1_iv_sta").value);
+			alert(JSON.stringify(pokemon1));
+
 			//var pokemon2 = new pokemon();
 		}
 	</script>
