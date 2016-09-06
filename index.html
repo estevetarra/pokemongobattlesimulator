@@ -61,11 +61,11 @@
 		function startBattle()
 		{
 			
-			var pokemon1 = new pokemon(document.getElementById("pokemon1_name").value,document.getElementById("pokemon1_lvl").value,
-							getRowSuchParamaterHasValue(cpmultiplier,"Level",document.getElementById("pokemon1_lvl").value)["CP_Multiplier"],
+			var pokemon1 = new pokemon(document.getElementById("pokemon1_name").value ,document.getElementById("pokemon1_lvl").value,
+							getRowSuchParamaterHasValue(cpmultiplier,"Level", document.getElementById("pokemon1_lvl").value )["CP_Multiplier"],
 							document.getElementById("pokemon1_charge_move").value, document.getElementById("pokemon1_quick_move").value,
-							document.getElementById("pokemon1_iv_att").value,document.getElementById("pokemon1_iv_def").value),
-							document.getElementById("pokemon1_iv_sta").value);
+							document.getElementById("pokemon1_iv_att").value, document.getElementById("pokemon1_iv_def").value,
+							document.getElementById("pokemon1_iv_sta").value );
 			alert(JSON.stringify(pokemon1));
 
 			//var pokemon2 = new pokemon();
