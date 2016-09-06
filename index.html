@@ -66,9 +66,14 @@
 							document.getElementById("pokemon1_charge_move").value, document.getElementById("pokemon1_quick_move").value,
 							document.getElementById("pokemon1_iv_att").value, document.getElementById("pokemon1_iv_def").value,
 							document.getElementById("pokemon1_iv_sta").value );
-			alert(JSON.stringify(pokemon1));
+			var pokemon2 = new pokemon(document.getElementById("pokemon2_name").value ,document.getElementById("pokemon2_lvl").value,
+							getRowSuchParamaterHasValue(cpmultiplier,"Level", document.getElementById("pokemon2_lvl").value )["CP_Multiplier"],
+							document.getElementById("pokemon2_charge_move").value, document.getElementById("pokemon2_quick_move").value,
+							document.getElementById("pokemon2_iv_att").value, document.getElementById("pokemon2_iv_def").value,
+							document.getElementById("pokemon2_iv_sta").value );
+			
+			alert(JSON.stringify(pokemon2));
 
-			//var pokemon2 = new pokemon();
 		}
 	</script>
 </HEAD>
