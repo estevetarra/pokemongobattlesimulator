@@ -35,6 +35,7 @@
 				for(var i = 0; i< chargeMoves.length; i++) 
 					names.push(chargeMoves[i]["Name"]);
 				addOptionsToDatalist(names, 'pokemon_list_charge_moves');
+				alert(JSON.stringify(chargeMoves));
 			});
 			$.get("https://raw.githubusercontent.com/estevetarra/pokemongobattlesimulator/master/database/Species_Data.csv", function(data, status){
 				species = csvJSON(data);
@@ -55,8 +56,8 @@
 		function startBattle()
 		{
 			
-			var pokemon1 = new pokemon();
-			var pokemon2 = new pokemon();
+			//var pokemon1 = new pokemon(document.getElementById("pokemon1").value);
+			//var pokemon2 = new pokemon();
 		}
 	</script>
 </HEAD>
@@ -73,7 +74,7 @@
 	  <tr>
 		<th>Pokemon</th>
 		<th> <input list="pokemon-names" id="pokemon1_name" onchange=""></th>
-		<th> <input list="pokemon-names" id="pokemon1_name" onchange=""> </th>
+		<th> <input list="pokemon-names" id="pokemon2_name" onchange=""> </th>
 
 	  </tr>
 	  <tr>
