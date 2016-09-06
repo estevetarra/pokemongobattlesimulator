@@ -3,6 +3,7 @@ function pokemon(spiece, level, levelmultiplayer , charge_move, quick_move , iva
     this.spiece = spiece;
     this.level = level;
     this.levelmultiplayer = levelmultiplayer;
+    alert(this.levelmultiplayer);
     this.charge_move = charge_move;
     this.quick_move = quick_move;
     this.ivatt = ivatt;
