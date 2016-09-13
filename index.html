@@ -61,18 +61,18 @@
 		function startBattle()
 		{
 			
-			var pokemon1 = new pokemon(document.getElementById("pokemon1_name").value ,document.getElementById("pokemon1_lvl").value,
+			var pokemon1 = new Pokemon(document.getElementById("pokemon1_name").value ,document.getElementById("pokemon1_lvl").value,
 							getRowSuchParamaterHasValue(cpmultiplier,"Level", document.getElementById("pokemon1_lvl").value )["CP_Multiplier"],
 							document.getElementById("pokemon1_charge_move").value, document.getElementById("pokemon1_quick_move").value,
 							document.getElementById("pokemon1_iv_att").value, document.getElementById("pokemon1_iv_def").value,
 							document.getElementById("pokemon1_iv_sta").value );
-			var pokemon2 = new pokemon(document.getElementById("pokemon2_name").value ,document.getElementById("pokemon2_lvl").value,
+			var pokemon2 = new Pokemon(document.getElementById("pokemon2_name").value ,document.getElementById("pokemon2_lvl").value,
 							getRowSuchParamaterHasValue(cpmultiplier,"Level", document.getElementById("pokemon2_lvl").value )["CP_Multiplier"],
 							document.getElementById("pokemon2_charge_move").value, document.getElementById("pokemon2_quick_move").value,
 							document.getElementById("pokemon2_iv_att").value, document.getElementById("pokemon2_iv_def").value,
 							document.getElementById("pokemon2_iv_sta").value );
-			alert(JSON.stringify(getRowSuchParamaterHasValue(cpmultiplier,"Level", document.getElementById("pokemon2_lvl").value )));
-			alert(JSON.stringify(pokemon2));
+			//alert(JSON.stringify(getRowSuchParamaterHasValue(cpmultiplier,"Level", document.getElementById("pokemon2_lvl").value )));
+			//alert(JSON.stringify(pokemon2));
 
 		}
 	</script>
