@@ -1,4 +1,4 @@
-function pokemon(spiece, level, levelmultiplayer , charge_move, quick_move , ivatt, ivdeff, ivsta) 
+function Pokemon(spiece, level, levelmultiplayer , charge_move, quick_move , ivatt, ivdeff, ivsta) 
 {
     this.spiece = spiece;
     this.level = level;
@@ -11,7 +11,7 @@ function pokemon(spiece, level, levelmultiplayer , charge_move, quick_move , iva
     this.ivsta = ivsta;
 }
 
-function fighter(pokemon, baseatt, basedeff, basehp, deffending)
+function Fighter(pokemon, baseatt, basedeff, basehp, deffending)
 {
     this.pokemon = pokemon;
     this.baseatt = baseatt;
@@ -30,11 +30,11 @@ function fighter(pokemon, baseatt, basedeff, basehp, deffending)
     }
 }
 
-function battle(fighter1, fighter2, quick_move, charge_moves)
+function Battle(fighter1, fighter2, quick_moves, charge_moves)
 {
     this.fighter1 = fighter1;
     this.fighter2 = fighter2;
-    this.quick_move = quick_move;
+    this.quick_moves = quick_moves;
     this.charge_moves = charge_moves;
     this.time = 0;
     this.next_turn = function ms10more()
