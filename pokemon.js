@@ -56,7 +56,7 @@ function Battle(fighter1, fighter2, quick_moves, charge_moves)
             var stab = 1;
             var effectiveness = 1;
             var power = 1;
-            var damage = Math.floor(0.5 * power * (fighter1.att / figthter2.deff) * stab * effectiveness);
+            var damage = Math.floor(0.5 * power * (this.fighter1.att / this.fighter2.deff) * stab * effectiveness);
             
             fighter2.hp -= damage;
             //Notice that this isn't correct... fighter2 have advantadge
@@ -77,7 +77,7 @@ function Battle(fighter1, fighter2, quick_moves, charge_moves)
             var stab = 1;
             var effectiveness = 1;
             var power = 1;
-            var damage = Math.floor(0.5 * power * (fighter2.att / figthter1.deff) * stab * effectiveness);
+            var damage = Math.floor(0.5 * power * (this.fighter2.att / this.figther1.deff) * stab * effectiveness);
             
             fighter1.hp -= damage;
             //Notice that this isn't correct... fighter2 have advantadge
