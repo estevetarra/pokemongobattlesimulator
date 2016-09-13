@@ -72,9 +72,9 @@
 							document.getElementById("pokemon2_iv_att").value, document.getElementById("pokemon2_iv_def").value,
 							document.getElementById("pokemon2_iv_sta").value );
 			var rowpokemon1 = getRowSuchParamaterHasValue(species,"Name", pokemon1.spiece);
-			var fighter1 = new Fighter(pokemon1, rowpokemon1["Attack Ratio"], rowpokemon1["Defense Ratio"]. rowpokemon1["HP Ratio"],0);							);
+			var fighter1 = new Fighter( pokemon1, rowpokemon1["Attack Ratio"] , rowpokemon1["Defense Ratio"], rowpokemon1["HP Ratio"],0);							);
 			var rowpokemon2 = getRowSuchParamaterHasValue(species,"Name", pokemon2.spiece);
-			var fighter2 = new Fighter(pokemon2, rowpokemon2["Attack Ratio"], rowpokemon2["Defense Ratio"]. rowpokemon2["HP Ratio"],0);
+			var fighter2 = new Fighter(pokemon2, rowpokemon2["Attack Ratio"], rowpokemon2["Defense Ratio"], rowpokemon2["HP Ratio"],0);
 			var battle = new Battle(fighter1,fighter2,basicMoves,chargeMoves);
 			alert(battle.getWinner());
 			//alert(JSON.stringify(getRowSuchParamaterHasValue(cpmultiplier,"Level", document.getElementById("pokemon2_lvl").value )));
