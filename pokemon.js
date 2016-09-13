@@ -1,3 +1,10 @@
+function getRowSuchParamaterHasValue(objectjson, param,value)
+{
+	for(var i = 0; i < objectjson.length; i++)
+		if(objectjson[i][param] == value) 
+			return objectjson[i];
+}
+
 function Pokemon(spiece, level, levelmultiplayer , charge_move, quick_move , ivatt, ivdeff, ivsta) 
 {
     this.spiece = spiece;
@@ -39,6 +46,25 @@ function Battle(fighter1, fighter2, quick_moves, charge_moves)
     this.time = 0;
     this.next_turn = function ms10more()
     {
+        //If both of them are alive
+        if(fighter1.cooldown == 0)
+        {
+            //inflict damage to the enemy
+            //Update energy of both
+        }
+        if(fighter1.cooldown <= 0)
+        {
+          //decide next move
+          //Update energy
+
+        }
+        
+        //decrease cooldowmn
+        
+    };
+    this.getWinner = function getWinner()
+    {
+        return this.fighter1.pokemon.spiece;
         //If both of them are alive
         if(fighter1.cooldown == 0)
         {
